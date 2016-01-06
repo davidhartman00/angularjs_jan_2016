@@ -1,0 +1,40 @@
+body{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    color: black;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+nav, footer, .btn {
+    transition: background-color 0.5s ease;
+}
+
+#deskNav{
+    display:inline-block;
+}
+
+#deskNav:after{
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+li.tab a {
+    -moz-transition: all .5s ease!important;
+    -webkit-transition: all .5s ease!important;
+    transition: all .5s ease!important;
+}
+
+.active{
+    /*padding: 10px;*/
+    -ms-transform: scale(1.3,1.3); /* IE 9 */
+    -webkit-transform: scale(1.3,1.3); /* Safari */
+    transform: scale(1.3,1.3);
+}
