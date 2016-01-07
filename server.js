@@ -27,6 +27,10 @@ app.get('*', function(req,res){
 	res.sendFile(path.join(__dirname + '/public/app/index.html'))
 })
 
-app.listen(3030)  //process.env.PORT, function(err){
-    console.log('Listening on port 3030' )//process.env.PORT)
-// })
+app.set('port', process.env.PORT || 3030)
+
+app.listen(app.get('port'))
+console.log("Listening on, ", app.get('port'));
+// app.listen(3030)  //process.env.PORT, function(err){
+//     console.log('Listening on port 3030' )//process.env.PORT)
+// // })
